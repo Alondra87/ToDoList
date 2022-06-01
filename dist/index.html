@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
-    <script defer src="index.bundle.js"></script>
-    <script defer src="print.bundle.js"></script>
+    <title>To Do List</title>
+    <script defer src="/runtime.e3edc7b8.js"></script>
+    <script defer src="/index.e3edc7b8.js"></script>
   </head>
   <body>
     <h1>To Do List</h1>
     <div class="container">
-      <ul class="list">
-        <li>Today's To Do</li>
-        <li>Add to your list...</li>
-        <li></li>
-      </ul>
+      <form class="add">
+        <input
+          type="text"
+          class="form"
+          placeholder="Add to your list..."
+          name="add"
+        />
+      </form>
+      <div id="list"></div>
+      <button type="submit" class="clear">Clear all completed</button>
     </div>
   </body>
 </html>

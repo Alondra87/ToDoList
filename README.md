@@ -1,56 +1,61 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Project ToDoList
 
-> Description the project.
-
+> In this project, I build a simple HTML list of To Do tasks.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML 5
+- CSS 3
+- JavaScript
+- Webpack
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
-
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Web Browser (e.g. Firefox, Chrome, Edge)
+- NPM (Node Package Manager)
+
 ### Setup
+
+Download the code from this repository.
 
 ### Install
 
+Install the project dependencies using this command on the root project directory:
+
+```console
+$ npm install
+```
+
 ### Usage
+
+Open the index.html file in your Web Browser.
 
 ### Run tests
 
+for linters;
+run: npx hint .
+run: npx eslint .
+run: npx stylelint "\*_/_.{css,scss}"
+
 ### Deployment
-
-
 
 ## Authors
 
-👤 **Author1**
+👤 **Andrea Alvarez**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Alondra87](https://github.com/Alondra87)
+- Twitter: @AndreaA07211436
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/andrea-a-384903224/)
 
 ## 🤝 Contributing
 
@@ -61,12 +66,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
