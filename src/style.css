@@ -1,3 +1,99 @@
-body {
-  background-color: bisque;
+/* Variables */
+:root {
+  /* Color Palette */
+  --color-mint: #56cc9d;
+  --color-clear: #f3969a;
+  --color-grey-light-1: #eceeef;
+  --color-grey-dark-1: #888;
+  --color-grey-dark-2: #343a40;
 }
+
+/* Resetting */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Base Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-grey-light-1);
+  font-size: 1.5rem;
+  color: var(--color-grey-dark-2);
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-grey-dark-2);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main Content Component  */
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  padding: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 50rem;
+  height: 5rem;
+  padding: 1rem;
+}
+
+::placeholder {
+  color: var(--color-mint);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.list {
+  background-color: white;
+  width: 50rem;
+  height: 5rem;
+  max-height: 300px;
+  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+  padding: 1rem;
+}
+
+#othertask {
+  margin: 1rem;
+}
+
+.clear {
+  width: 50rem;
+  height: 5rem;
+  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+  border: none;
+  background-color: var(--color-clear);
+  color: var(--color-grey-light-1);
+  font-size: 1.5rem;
+}
+
+/*
+
+  .finished {
+    text-decoration: line-through;
+  } */
