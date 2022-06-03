@@ -44,8 +44,8 @@ button {
 
 /* Main Styles */
 
-h1{
-  color:var(--color-grey-light-1) ;
+h1 {
+  color: var(--color-grey-light-1);
 }
 
 form {
