@@ -42,58 +42,97 @@ button {
   cursor: pointer;
 }
 
-/* Main Content Component  */
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem;
-  padding: 5rem;
-}
-
-.container {
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.form {
-  width: 50rem;
-  height: 5rem;
-  padding: 1rem;
 }
 
 ::placeholder {
   color: var(--color-mint);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-style: italic;
 }
 
-.list {
-  background-color: white;
-  width: 50rem;
-  height: 5rem;
-  max-height: 300px;
+.main-div {
   box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+  width: 60rem;
+  font-size: 2rem;
+  text-align: left;
+  margin: 2rem;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-div {
+  padding: 0.2rem;
+  border-bottom: 1px solid var(--color-grey-light-1);
+  display: flex;
+  align-items: center;
+}
+
+input {
+  border: none;
+  padding: 15px;
+  font-style: italic;
+  font-size: 18px;
+  border-bottom: 1px solid var(--color-grey-dark-2);
+  outline: none;
+}
+
+p {
   padding: 1rem;
 }
 
-#othertask {
-  margin: 1rem;
-}
-
-.clear {
-  width: 50rem;
-  height: 5rem;
-  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+#clear {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
   border: none;
   background-color: var(--color-clear);
   color: var(--color-grey-light-1);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-/*
+#clear:hover {
+  cursor: pointer;
+}
 
-  .finished {
-    text-decoration: line-through;
-  } */
+i {
+  float: right;
+}
+
+#header {
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.listContent {
+  flex: 2;
+  border: none;
+  margin: 18px 0;
+}
+
+.listContent-disable {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.remove-icon-active {
+  display: none;
+}
+
+.icon2 {
+  display: none;
+}
+
+.newbackg {
+  background-color: var(--color-grey-light-1);
+}
