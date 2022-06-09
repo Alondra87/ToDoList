@@ -45,28 +45,7 @@ button {
 /* Main Styles */
 
 h1 {
-  color: var(--color-grey-light-1);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-::placeholder {
-  color: var(--color-mint);
-  font-size: 1.8rem;
-  font-style: italic;
-}
-
-.main-div {
-  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
-  width: 60rem;
-  font-size: 2rem;
-  text-align: left;
-  margin: 2rem;
-  padding: 3rem;
-  background-color: #fff;
+  color: var(--color-grey-dark-2);
 }
 
 section {
@@ -77,11 +56,30 @@ section {
   flex-direction: column;
 }
 
-.input-div {
-  padding: 0.2rem;
-  border-bottom: 1px solid var(--color-grey-light-1);
+/* form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+} */
+
+::placeholder {
+  color: var(--color-mint);
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.todoList {
+  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+  width: 60rem;
+  font-size: 2rem;
+  text-align: left;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.todoList div {
+  width: 50rem;
+  border-bottom: 1px solid var(--color-grey-light-1);
+  padding: 8px;
 }
 
 input {
@@ -89,12 +87,11 @@ input {
   padding: 15px;
   font-style: italic;
   font-size: 18px;
-  border-bottom: 1px solid var(--color-grey-dark-2);
   outline: none;
 }
 
-p {
-  padding: 1rem;
+.input-completed {
+  background-color: var(--color-grey-light-1);
 }
 
 #clear {
@@ -105,6 +102,7 @@ p {
   background-color: var(--color-clear);
   color: var(--color-grey-light-1);
   font-size: 2rem;
+  width: 60rem;
 }
 
 #clear:hover {
@@ -120,7 +118,7 @@ i {
   padding: 2rem;
 }
 
-.listContent {
+/* .listContent {
   flex: 2;
   border: none;
   margin: 18px 0;
@@ -129,14 +127,35 @@ i {
 .listContent-disable {
   text-decoration: line-through;
   opacity: 0.6;
+} */
+
+.fa-trash-alt {
+  display: none;
+  padding: 15px;
 }
 
-.remove-icon-active {
-  display: none;
+.trash {
+  display: block;
 }
 
-.icon2 {
-  display: none;
+.fa-ellipsis-v {
+  padding: 15px;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+.edit-task {
+  width: 0.5px;
+  height: 3.8rem;
+  background-color: #fff;
+  animation-name: edited;
+  animation-duration: 1.5s;
+}
+
+@keyframes edited {
+  0% { background-color: var(--color-grey-dark-1); }
 }
 
 .newbackg {
