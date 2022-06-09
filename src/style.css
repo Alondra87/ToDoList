@@ -56,11 +56,6 @@ section {
   flex-direction: column;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
-} */
-
 ::placeholder {
   color: var(--color-mint);
   font-size: 1.8rem;
@@ -117,17 +112,6 @@ i {
   font-weight: bold;
   padding: 2rem;
 }
-
-/* .listContent {
-  flex: 2;
-  border: none;
-  margin: 18px 0;
-}
-
-.listContent-disable {
-  text-decoration: line-through;
-  opacity: 0.6;
-} */
 
 .fa-trash-alt {
   display: none;

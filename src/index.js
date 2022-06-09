@@ -1,7 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import './style.css';
 
-// import loadTaskses from './modules/Tasks.js';
 import LoadToDoList from './modules/LoadToDOList.js';
 import AddTaskToList from './modules/AddTask.js';
 
@@ -49,7 +47,6 @@ const CountCheckbox = document.querySelector('input');
 CountCheckbox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     const checkboxes = document.querySelectorAll('.checkbox');
-    // console.log(checkboxes.length);
     const taskObject = {
       description: inputTask.value,
       completed: false,
@@ -57,7 +54,6 @@ CountCheckbox.addEventListener('keypress', (event) => {
     };
     arrayTask.push(taskObject);
     saveList(arrayTask);
-    // console.log(arrayTask);
     inputTask.value = null;
   }
 });
