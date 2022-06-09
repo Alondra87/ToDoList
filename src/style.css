@@ -42,58 +42,106 @@ button {
   cursor: pointer;
 }
 
-/* Main Content Component  */
+/* Main Styles */
 
 h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem;
-  padding: 5rem;
+  color: var(--color-grey-dark-2);
 }
 
-.container {
+section {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.form {
-  width: 50rem;
-  height: 5rem;
-  padding: 1rem;
+  flex-direction: column;
 }
 
 ::placeholder {
   color: var(--color-mint);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-style: italic;
 }
 
-.list {
-  background-color: white;
-  width: 50rem;
-  height: 5rem;
-  max-height: 300px;
+.todoList {
   box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
-  padding: 1rem;
+  width: 60rem;
+  font-size: 2rem;
+  text-align: left;
+  padding: 3rem;
+  background-color: #fff;
 }
 
-#othertask {
-  margin: 1rem;
+.todoList div {
+  width: 50rem;
+  border-bottom: 1px solid var(--color-grey-light-1);
+  padding: 8px;
 }
 
-.clear {
-  width: 50rem;
-  height: 5rem;
-  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+input {
+  border: none;
+  padding: 15px;
+  font-style: italic;
+  font-size: 18px;
+  outline: none;
+}
+
+.input-completed {
+  background-color: var(--color-grey-light-1);
+}
+
+#clear {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
   border: none;
   background-color: var(--color-clear);
   color: var(--color-grey-light-1);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  width: 60rem;
 }
 
-/*
+#clear:hover {
+  cursor: pointer;
+}
 
-  .finished {
-    text-decoration: line-through;
-  } */
+i {
+  float: right;
+}
+
+#header {
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.fa-trash-alt {
+  display: none;
+  padding: 15px;
+}
+
+.trash {
+  display: block;
+}
+
+.fa-ellipsis-v {
+  padding: 15px;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+.edit-task {
+  width: 0.5px;
+  height: 3.8rem;
+  background-color: #fff;
+  animation-name: edited;
+  animation-duration: 1.5s;
+}
+
+@keyframes edited {
+  0% { background-color: var(--color-grey-dark-1); }
+}
+
+.newbackg {
+  background-color: var(--color-grey-light-1);
+}

@@ -2,7 +2,12 @@
 
 # Project ToDoList
 
-> In this project, I build a simple HTML list of To Do tasks.
+> In this project, I build a simple HTML list of To Do tasks with the following functionalities;
+
+- Add a new item.
+- Remove a selected item.
+- Mark a selected item as complete.
+- Remove all items marked as complete at once.
 
 ## Built With
 
@@ -33,7 +38,7 @@ Download the code from this repository.
 Install the project dependencies using this command on the root project directory:
 
 ```console
-$ npm install
+$ npm run start
 ```
 
 ### Usage
