@@ -1,6 +1,6 @@
 import './style.css';
 
-import LoadToDoList from './modules/LoadToDoList.js';
+import LoadToDoList from './modules/LoadToDoListTask.js';
 import AddTaskToList from './modules/AddTask.js';
 import CheckBoxesChecked from './modules/checkBox.js';
 
