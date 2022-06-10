@@ -5,43 +5,25 @@ import AddTaskToList from './modules/AddTask.js';
 import CheckBoxesChecked from './modules/checkBox.js';
 
 LoadToDoList();
-const arrayTask = [];
+
+let arrayTask = [];
 
 const saveList = (array) => {
   localStorage.setItem('mytodoList', JSON.stringify(array));
 };
 
-const genNewId = (elemsArray) => {
-  if (elemsArray.length >= 0) {
-    return elemsArray.length + 1;
-  }
-  return elemsArray.length;
-};
-
-const getList = () => {
-  const list = JSON.parse(localStorage.getItem('mytodoList'));
-  if (list !== null) {
-    list.forEach((element) => {
-      const checkbox = document.querySelectorAll('.checkbox');
-      AddTaskToList(element.description, genNewId(checkbox));
-      const taskObject = {
-        description: element.description,
-        completed: false,
-        index: genNewId(checkbox),
-      };
-      arrayTask.push(taskObject);
-      saveList(arrayTask);
-    });
-  }
-};
-getList();
+if (localStorage.getItem('mytodoList')) {
+  arrayTask = JSON.parse(localStorage.getItem('mytodoList'));
+  arrayTask.forEach((element) => {
+    AddTaskToList(element.task, element.index, element.done);
+  });
+}
 
 const inputTask = document.querySelector('input');
 inputTask.addEventListener('keypress', (event) => {
-  const checkBoxIndex = document.querySelectorAll('.checkbox');
   if (event.key === 'Enter' && inputTask.value) {
     event.preventDefault();
-    AddTaskToList(inputTask.value, genNewId(checkBoxIndex)); // + 1
+    AddTaskToList(inputTask.value, arrayTask.length + 1); // + 1
   }
 });
 
@@ -50,8 +32,8 @@ CountCheckbox.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     const checkboxes = document.querySelectorAll('.checkbox');
     const taskObject = {
-      description: inputTask.value,
-      completed: false,
+      task: inputTask.value,
+      done: false,
       index: checkboxes.length,
     };
     arrayTask.push(taskObject);
@@ -60,7 +42,7 @@ CountCheckbox.addEventListener('keypress', (event) => {
   }
 });
 
-document.addEventListener('click', (event) => {
+document.addEventListener('change', (event) => {
   CheckBoxesChecked(event);
 });
 
@@ -82,7 +64,7 @@ document.addEventListener('click', (event) => {
 document.addEventListener('change', (event) => {
   if (event.target.classList.contains('task')) {
     const list = JSON.parse(localStorage.getItem('mytodoList'));
-    list[event.target.parentNode.firstElementChild.id - 1].description = event.target.value;
+    list[event.target.parentNode.firstElementChild.id - 1].task = event.target.value;
     event.target.nextElementSibling.classList.toggle('edit-task');
     saveList(list);
   }
@@ -90,14 +72,9 @@ document.addEventListener('change', (event) => {
 
 const clearAll = document.querySelector('#clear');
 clearAll.addEventListener('click', () => {
-  const checkboxes = document.querySelectorAll('.checkbox');
-  for (let i = 0; i < checkboxes.length; i += 1) {
-    if (checkboxes[i].checked) {
-      checkboxes[i].parentNode.remove();
-    }
-  }
-  const list = JSON.parse(localStorage.getItem('mytodoList'));
-  const newList = list.filter((e) => e.completed !== true);
-  saveList(newList);
+  arrayTask = JSON.parse(localStorage.getItem('mytodoList'));
+  arrayTask = arrayTask.filter((task) => task.done === false);
+  arrayTask = arrayTask.map((item, i) => ({ task: item.task, done: item.done, index: i + 1 }));
+  saveList(arrayTask);
   window.location.reload();
 });
