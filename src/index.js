@@ -1,10 +1,12 @@
 import './style.css';
 
-import LoadToDoList from './modules/LoadToDOList.js';
+import LoadToDoList from './modules/LoadToDoList.js';
 import AddTaskToList from './modules/AddTask.js';
+import CheckBoxesChecked from './modules/checkBox.js';
 
 LoadToDoList();
 const arrayTask = [];
+
 const saveList = (array) => {
   localStorage.setItem('mytodoList', JSON.stringify(array));
 };
@@ -59,15 +61,7 @@ CountCheckbox.addEventListener('keypress', (event) => {
 });
 
 document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('checkbox')) {
-    const list = JSON.parse(localStorage.getItem('mytodoList'));
-    list[event.target.id - 1].completed = !list[event.target.id - 1].completed;
-    event.target.parentNode.classList.toggle('newbackg');
-    event.target.nextElementSibling.classList.toggle('input-completed');
-    event.target.nextElementSibling.classList.toggle('completed-task');
-    event.target.parentNode.lastElementChild.classList.toggle('trash');
-    saveList(list);
-  }
+  CheckBoxesChecked(event);
 });
 
 document.addEventListener('click', (event) => {
@@ -92,4 +86,18 @@ document.addEventListener('change', (event) => {
     event.target.nextElementSibling.classList.toggle('edit-task');
     saveList(list);
   }
+});
+
+const clearAll = document.querySelector('#clear');
+clearAll.addEventListener('click', () => {
+  const checkboxes = document.querySelectorAll('.checkbox');
+  for (let i = 0; i < checkboxes.length; i += 1) {
+    if (checkboxes[i].checked) {
+      checkboxes[i].parentNode.remove();
+    }
+  }
+  const list = JSON.parse(localStorage.getItem('mytodoList'));
+  const newList = list.filter((e) => e.completed !== true);
+  saveList(newList);
+  window.location.reload();
 });

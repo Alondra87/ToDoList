@@ -46,6 +46,8 @@ button {
 
 h1 {
   color: var(--color-grey-dark-2);
+  margin: 3rem;
+  padding-top: 5rem;
 }
 
 section {
@@ -131,9 +133,7 @@ i {
 }
 
 .edit-task {
-  width: 0.5px;
-  height: 3.8rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   animation-name: edited;
   animation-duration: 1.5s;
 }
