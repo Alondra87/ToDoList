@@ -46,6 +46,8 @@ button {
 
 h1 {
   color: var(--color-grey-dark-2);
+  margin: 3rem;
+  padding-top: 5rem;
 }
 
 section {
@@ -85,7 +87,7 @@ input {
   outline: none;
 }
 
-.input-completed {
+.input-done {
   background-color: var(--color-grey-light-1);
 }
 
@@ -126,14 +128,13 @@ i {
   padding: 15px;
 }
 
-.completed-task {
+.done-task {
   text-decoration: line-through;
+  background-color: var(--color-grey-light-1);
+  width: 50%;
 }
 
 .edit-task {
-  width: 0.5px;
-  height: 3.8rem;
-  background-color: #fff;
   animation-name: edited;
   animation-duration: 1.5s;
 }
