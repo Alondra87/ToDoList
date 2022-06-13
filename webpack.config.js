@@ -21,7 +21,7 @@ module.exports = {
     chunkFilename: '[id].[hash:8].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/',
+    publicPath: '/ToDoList/',
   },
 
   optimization: {
