@@ -6,15 +6,15 @@ import CheckBoxesChecked from './modules/checkBox.js';
 
 LoadToDoList();
 
-let List = [];
+let arrayTask = [];
 
 const saveList = (array) => {
   localStorage.setItem('mytodoList', JSON.stringify(array));
 };
 
 if (localStorage.getItem('mytodoList')) {
-  List = JSON.parse(localStorage.getItem('mytodoList'));
-  List.forEach((element) => {
+  arrayTask = JSON.parse(localStorage.getItem('mytodoList'));
+  arrayTask.forEach((element) => {
     AddTaskToList(element.task, element.index, element.done);
   });
 }
@@ -23,7 +23,7 @@ const inputTask = document.querySelector('input');
 inputTask.addEventListener('keypress', (event) => {
   if (event.key === 'Enter' && inputTask.value) {
     event.preventDefault();
-    AddTaskToList(inputTask.value, List.length + 1); // + 1
+    AddTaskToList(inputTask.value, arrayTask.length + 1); // + 1
   }
 });
 
@@ -36,8 +36,8 @@ CountCheckbox.addEventListener('keypress', (event) => {
       done: false,
       index: checkboxes.length,
     };
-    List.push(taskObject);
-    saveList(List);
+    arrayTask.push(taskObject);
+    saveList(arrayTask);
     inputTask.value = null;
   }
 });
@@ -72,9 +72,9 @@ document.addEventListener('change', (event) => {
 
 const clearAll = document.querySelector('#clear');
 clearAll.addEventListener('click', () => {
-  List = JSON.parse(localStorage.getItem('mytodoList'));
-  List = List.filter((task) => task.done === false);
-  List = List.map((item, i) => ({ task: item.task, done: item.done, index: i + 1 }));
-  saveList(List);
+  arrayTask = JSON.parse(localStorage.getItem('mytodoList'));
+  arrayTask = arrayTask.filter((task) => task.done === false);
+  arrayTask = arrayTask.map((item, i) => ({ task: item.task, done: item.done, index: i + 1 }));
+  saveList(arrayTask);
   window.location.reload();
 });
