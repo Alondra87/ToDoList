@@ -1,0 +1,148 @@
+/* Variables */
+:root {
+  /* Color Palette */
+  --color-mint: #56cc9d;
+  --color-clear: #f3969a;
+  --color-grey-light-1: #eceeef;
+  --color-grey-dark-1: #888;
+  --color-grey-dark-2: #343a40;
+}
+
+/* Resetting */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Base Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-grey-light-1);
+  font-size: 1.5rem;
+  color: var(--color-grey-dark-2);
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-grey-dark-2);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main Styles */
+
+h1 {
+  color: var(--color-grey-dark-2);
+  margin: 3rem;
+  padding-top: 5rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+::placeholder {
+  color: var(--color-mint);
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.todoList {
+  box-shadow: var(--color-grey-dark-2) 2px 2px 5px;
+  width: 60rem;
+  font-size: 2rem;
+  text-align: left;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.todoList div {
+  width: 50rem;
+  border-bottom: 1px solid var(--color-grey-light-1);
+  padding: 8px;
+}
+
+input {
+  border: none;
+  padding: 15px;
+  font-style: italic;
+  font-size: 18px;
+  outline: none;
+}
+
+.input-done {
+  background-color: var(--color-grey-light-1);
+}
+
+#clear {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  border: none;
+  background-color: var(--color-clear);
+  color: var(--color-grey-light-1);
+  font-size: 2rem;
+  width: 60rem;
+}
+
+#clear:hover {
+  cursor: pointer;
+}
+
+i {
+  float: right;
+}
+
+#header {
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.fa-trash-alt {
+  display: none;
+  padding: 15px;
+}
+
+.trash {
+  display: block;
+}
+
+.fa-ellipsis-v {
+  padding: 15px;
+}
+
+.done-task {
+  text-decoration: line-through;
+  background-color: var(--color-grey-light-1);
+  width: 50%;
+}
+
+.edit-task {
+  animation-name: edited;
+  animation-duration: 1.5s;
+}
+
+@keyframes edited {
+  0% { background-color: var(--color-grey-dark-1); }
+}
+
+.newbackg {
+  background-color: var(--color-grey-light-1);
+}
