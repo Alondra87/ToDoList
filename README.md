@@ -16,9 +16,15 @@
 - JavaScript
 - Webpack
 
-## Live Demo (if available)
+## Deployment
 
-https://alondra87.github.io/ToDoList/
+https://alondra87.github.io/ToDoListApp/dist/
+
+## Screenshots 
+
+![screenToDoList](https://user-images.githubusercontent.com/99088112/179286052-049f122a-2451-4808-9561-283ddd42b47f.PNG)
+
+![screenToDoList1](https://user-images.githubusercontent.com/99088112/179286016-56893a44-bcd6-4e1a-8726-f9849d19a77b.PNG)
 
 ## Getting Started
 
@@ -51,8 +57,6 @@ for linters;
 run: npx hint .
 run: npx eslint .
 run: npx stylelint "\*_/_.{css,scss}"
-
-### Deployment
 
 ## Authors
 
